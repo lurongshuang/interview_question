@@ -8,7 +8,7 @@ import 'package:interview_question/constants/app_config.dart';
 import 'package:interview_question/global/gloab.dart';
 import 'package:interview_question/theme/app_theme.dart';
 import 'package:interview_question/utils/log/logger.dart';
-
+import 'package:netease_corekit_im/router/imkit_router.dart';
 import 'pages/wf_app_page/view.dart';
 import 'routers/app_pages.dart';
 
@@ -54,6 +54,7 @@ class MyAppState extends State<MyApp> with LoggerPlus, WidgetsBindingObserver {
               home: WfAppPagePage(key: globalAppKey),
               navigatorObservers: [PageLifecycleObserver()],
               getPages: AppPages.pages,
+              routes: IMKitRouter.instance.routes,
               defaultTransition: defaultTransition,
               localizationsDelegates: AppConfig.localizationsDelegates,
               supportedLocales: AppConfig.supportedLocales,

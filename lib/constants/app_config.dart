@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:nim_chatkit_ui/chat_kit_client.dart';
+import 'package:nim_contactkit_ui/contact_kit_client.dart';
+import 'package:nim_conversationkit_ui/conversation_kit_client.dart';
+import 'package:nim_searchkit_ui/search_kit_client.dart';
+import 'package:nim_teamkit_ui/team_kit_client.dart';
+import 'package:netease_corekit_im/im_kit_client.dart';
+import 'package:netease_common_ui/common_ui.dart';
 class AppConfig {
   static const String appName = "面试题";
 
@@ -26,12 +32,18 @@ class AppConfig {
 
   /// 本地化
   static List<LocalizationsDelegate<dynamic>> localizationsDelegates = [
+    CommonUILocalizations.delegate,
+    ConversationKitClient.delegate,
+    ChatKitClient.delegate,
+    ContactKitClient.delegate,
+    TeamKitClient.delegate,
+    SearchKitClient.delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate
   ];
 
   /// 支持语言环境
-  static List<Locale> supportedLocales = [const Locale('zh', 'CN')];
+  static List<Locale> supportedLocales = IMKitClient.supportedLocales;
 
 }

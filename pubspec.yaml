@@ -44,12 +44,27 @@ dependencies:
   flutter_animate: ^4.5.0
   #请求
   dio: ^5.4.1
+  # 网易云信
+  nim_core: ^1.1.0
+  # 通讯录功能
+  nim_contactkit_ui: ^9.7.2
+  # 会话列表功能组件
+  nim_conversationkit_ui: ^9.7.2
+  # 群组功能组件
+  nim_teamkit_ui: ^9.7.2
+  # 聊天功能组件
+  nim_chatkit_ui: ^9.7.2
+  # 搜索功能组件
+  nim_searchkit_ui: ^9.7.2
+  #声网
+  agora_rtc_engine: ^6.3.2
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-
+dependency_overrides:
+  intl: ^0.18.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
